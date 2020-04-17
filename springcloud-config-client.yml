@@ -1,26 +1,26 @@
 spring: 
-    profiles: 
-        active:
-           - dev
+  profiles: 
+    active:
+      - dev
 ---
 server: 
-    port: 8201
+  port: 8201
 spring:
-    profiles: dev
-    application:
-        name: springcloud-config-client-dev
+  profiles: dev
+  application:
+    name: springcloud-config-client-dev
 eureka:
-    client: 
-        service-url: 
-            defaultZone: http://location:7001/eureka/
+  client: 
+    service-url: 
+      defaultZone: http://location:7001/eureka/
 ---
 server: 
-    port: 8202
+  port: 8202
 spring:
-    profiles: test
+  profiles: test
     application:
-        name: springcloud-config-client-test
+      name: springcloud-config-client-test
 eureka:
-    client: 
-        service-url: 
-            defaultZone: http://location:7001/eureka/
+  client: 
+    service-url: 
+      defaultZone: http://location:7001/eureka/
